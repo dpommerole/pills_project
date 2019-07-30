@@ -5,6 +5,8 @@
 #
 version: 2
 
+dot_cache_key: &dot_cache_key v1-dot_cache-{{ checksum "yarn.lock" }}
+
 save_dot_cache: &save_dot_cache
   save_cache:
     key: *dot_cache_key
