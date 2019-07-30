@@ -45,7 +45,7 @@ jobs:
       # run tests!
       - run:
           name: Run unit tests
-          command: yarn test:unit
+          command: yarn test:unit --coverage
       - run:
           name: Run functional tests
           command: yarn run test:e2e --headless
