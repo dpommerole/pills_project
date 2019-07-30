@@ -41,4 +41,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run:
+          name: Run unit tests
+          command: yarn test:unit
+      - run:
+          name: Run functional tests
+          command: yarn run test:e2e --headless
